@@ -1,1 +1,118 @@
+/* public/css/styles.css */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #050b18;
+  color: #f7fafc;
+}
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 0.95rem;
+  color: #cbd5f5;
+}
+
+form {
+  background: #0b1020;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
+
+input[type="url"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #2d3748;
+  background: #111827;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+input::placeholder {
+  color: #718096;
+}
+
+button[type="submit"],
+button[type="button"] {
+  margin-top: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #22c55e;
+  color: #020617;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.35);
+}
+
+.result {
+  margin-top: 20px;
+  background: #020617;
+  padding: 14px;
+  border-radius: 12px;
+}
+
+.result h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+#shortUrl {
+  font-family: "Menlo", "Consolas", monospace;
+  word-break: break-all;
+  margin-bottom: 8px;
+}
+
+#statusMsg {
+  font-size: 0.85rem;
+  color: #a0aec0;
+}
+
+footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.hidden {
+  display: none;
+}
