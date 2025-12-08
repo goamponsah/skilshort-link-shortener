@@ -1,1 +1,27 @@
- 
+ {
+  "name": "skilshort-link-shortener",
+  "version": "1.0.0",
+  "description": "Simple link shortener for Skilgrowth, deployed on Railway",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [
+    "link-shortener",
+    "railway",
+    "express"
+  ],
+  "author": "Skilgrowth Consult",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.0",
+    "express": "^4.19.0",
+    "morgan": "^1.10.0",
+    "nanoid": "^5.0.0",
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
