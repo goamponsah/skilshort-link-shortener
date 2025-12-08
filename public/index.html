@@ -1,1 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Skilshort – Simple Link Shortener</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Skilshort Link Shortener</h1>
+      <p>Create clean short links you can share on WhatsApp, TikTok and more.</p>
+    </header>
 
+    <main>
+      <form id="shorten-form">
+        <label for="originalUrl">Paste your long link</label>
+        <input
+          type="url"
+          id="originalUrl"
+          name="originalUrl"
+          placeholder="https://example.com/your/long/link"
+          required
+        />
+
+        <label for="customCode">Optional custom code</label>
+        <input
+          type="text"
+          id="customCode"
+          name="customCode"
+          placeholder="e.g. skilgrowth-book"
+        />
+
+        <button type="submit">Shorten link</button>
+      </form>
+
+      <section id="result" class="result hidden">
+        <h2>Your short link</h2>
+        <p id="shortUrl"></p>
+        <button id="copyBtn" type="button">Copy link</button>
+        <p id="statusMsg"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built by Skilgrowth Consult • Running on Railway</p>
+    </footer>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
