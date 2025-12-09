@@ -35,9 +35,15 @@ async function createShortLink(req, res, next) {
 
     const link = await Link.createLink({ code, originalUrl });
 
+    const host = req.get("host");
+    const proto =
+      host === "skil.name" || host === "www.skil.name"
+        ? "https"
+        : req.protocol;
+
     const baseUrl =
       process.env.BASE_URL ||
-      `${req.protocol}://${req.get("host")}`;
+      `${proto}://${host}`;
 
     const shortUrl = `${baseUrl}/${link.code}`;
 
@@ -78,9 +84,15 @@ async function getLinkStats(req, res, next) {
       return res.status(404).json({ error: "Short link not found" });
     }
 
+    const host = req.get("host");
+    const proto =
+      host === "skil.name" || host === "www.skil.name"
+        ? "https"
+        : req.protocol;
+
     const baseUrl =
       process.env.BASE_URL ||
-      `${req.protocol}://${req.get("host")}`;
+      `${proto}://${host}`;
 
     stats.shortUrl = `${baseUrl}/${stats.code}`;
 
